@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&family=Google+Sans+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 9% 20%;
+
+    --card: 220 20% 97%;
+    --card-foreground: 220 9% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 9% 20%;
+
+    --primary: 216 85% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 220 9% 35%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 220 20% 93%;
+    --accent-foreground: 220 9% 20%;
+
+    --destructive: 4 90% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 216 85% 55%;
+
+    --radius: 0.75rem;
+
+    /* Zoho + Google Mix Theme */
+    --google-blue: 216 85% 55%;
+    /* Bright Mixed Blue */
+    --google-red: 1 80% 55%;
+    /* Bright Mixed Red */
+    --google-yellow: 43 95% 52%;
+    /* Bright Mixed Yellow */
+    --google-green: 144 72% 36%;
+    /* Deep Mixed Green */
+
+    --font-main: "Google Sans", Roboto, Arial, sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 9% 46%;
+    --sidebar-primary: 216 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 96%;
+    --sidebar-accent-foreground: 220 9% 20%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 216 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (pointer: fine) {
+
+    *,
+    *::before,
+    *::after {
+      cursor: none !important;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .text-gradient-google {
+    background: linear-gradient(135deg, hsl(216 85% 55%), hsl(216 85% 65%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .google-card {
+    background: hsl(0 0% 100%);
+    border: 1px solid hsl(220 13% 91%);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .google-card:hover {
+    box-shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 6px 24px 0 hsl(0 0% 0% / 0.08);
+    border-color: hsl(220 13% 85%);
+  }
+
+  .google-elevated {
+    background: hsl(0 0% 100%);
+    border-radius: 16px;
+    box-shadow: 0 1px 2px 0 hsl(0 0% 0% / 0.05), 0 1px 3px 1px hsl(0 0% 0% / 0.03);
+    transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .google-elevated:hover {
+    box-shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 8px 32px 0 hsl(0 0% 0% / 0.1);
+  }
+
+  .btn-google {
+    background: hsl(216 85% 55%);
+    color: hsl(0 0% 100%);
+    border-radius: 24px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 4px 14px 0 hsl(216 85% 55% / 0.25);
+  }
+
+  .btn-google:hover {
+    background: hsl(216 85% 50%);
+    box-shadow: 0 6px 20px 0 hsl(216 85% 55% / 0.4);
+    transform: translateY(-1px);
+  }
+
+  .btn-google-outline {
+    background: transparent;
+    color: hsl(216 85% 55%);
+    border: 1px solid hsl(220 13% 86%);
+    border-radius: 24px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .btn-google-outline:hover {
+    background: hsl(216 85% 55% / 0.04);
+    border-color: hsl(216 85% 55% / 0.3);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid hsl(220 13% 91%);
+    background: hsl(0 0% 100%);
+    color: hsl(220 9% 46%);
+    transition: all 0.2s ease;
+  }
+
+  .chip:hover {
+    background: hsl(216 85% 55% / 0.06);
+    border-color: hsl(216 85% 55% / 0.3);
+    color: hsl(216 85% 55%);
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+  }
+
+  .stagger-1 {
+    animation-delay: 0.08s;
+  }
+
+  .stagger-2 {
+    animation-delay: 0.16s;
+  }
+
+  .stagger-3 {
+    animation-delay: 0.24s;
+  }
+
+  .stagger-4 {
+    animation-delay: 0.32s;
+  }
+
+  .google-dots::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: hsl(216 85% 55%);
+    margin-right: 8px;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 3s ease-in-out infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0 0% 98%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(220 13% 85%);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(220 13% 75%);
+}
+
+/* Google-style selection */
+::selection {
+  background: hsl(216 85% 55% / 0.15);
+  color: hsl(216 85% 45%);
+}
