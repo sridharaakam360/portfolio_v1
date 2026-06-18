@@ -1,4 +1,5 @@
-import { ArrowDown, Mail, Phone, Sparkles, Rocket, Bot, Zap } from "lucide-react";
+
+import { ArrowDown, Mail, Phone, Sparkles, Rocket, Bot, Zap, Beaker, Dna, Atom, FileText, Award, FlaskConical, Activity } from "lucide-react";
 import { RevealOnScroll } from "./Interactions";
 
 const Hero = () => {
@@ -18,23 +19,24 @@ const Hero = () => {
             <RevealOnScroll>
               <div className="inline-flex items-center gap-2 bg-primary/8 text-primary px-4 py-2 rounded-full text-sm font-medium mb-8 border border-primary/15">
                 <Sparkles size={14} />
-                Full-Stack Developer & ML Specialist
+                Computational Drug Discovery & Development
               </div>
             </RevealOnScroll>
 
             <RevealOnScroll delay={80}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6">
-                <span className="text-foreground">Start building </span>
-                <span className="text-gradient-google">intelligent</span>
-                <span className="text-foreground"> solutions with </span>
-                <span className="text-gradient-google">Gowtham</span>
+                <span className="text-foreground">Accelerating </span>
+                <span className="text-gradient-google">drug discovery</span>
+                <span className="text-foreground"> through </span>
+                <span className="text-gradient-google">computational</span>
+                <span className="text-foreground"> innovation</span>
               </h1>
             </RevealOnScroll>
 
             <RevealOnScroll delay={700}>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-10 max-w-lg">
-                Crafting scalable web solutions with MERN stack, Next.js, and AI/ML applications.
-                Maximize your product's potential with intelligent systems.
+                Specializing in molecular docking, MD simulations, cheminformatics, and AI-driven drug discovery.
+                Building end-to-end platforms that bridge computational biology with modern web technologies.
               </p>
             </RevealOnScroll>
 
@@ -44,21 +46,21 @@ const Hero = () => {
                   Get in touch
                 </a>
                 <a href="#projects" className="btn-google-outline inline-flex items-center gap-2">
-                  <Mail size={16} />
-                  View projects
+                  <FileText size={16} />
+                  View publications
                 </a>
               </div>
             </RevealOnScroll>
 
             <RevealOnScroll delay={900}>
               <div className="flex flex-wrap gap-6 items-center text-sm text-muted-foreground">
-                <a href="mailto:gowthamp1614@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <a href="mailto:sridharpharmkv@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                   <Mail size={14} />
-                  gowthamp1614@gmail.com
+                  sridharpharmkv@gmail.com
                 </a>
-                <a href="tel:+919791757215" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <a href="tel:+917639524474" className="flex items-center gap-2 hover:text-primary transition-colors">
                   <Phone size={14} />
-                  +91 9791757215
+                  +91 7639524474
                 </a>
               </div>
             </RevealOnScroll>
@@ -71,31 +73,31 @@ const Hero = () => {
                 {/* Stats cards floating */}
                 <div className="google-card p-4 mb-4 flex items-center gap-4 animate-float" style={{ animationDuration: '4.5s' }}>
                   <div className="w-10 h-10 rounded-full bg-[hsl(var(--google-blue))]/10 flex items-center justify-center">
-                    <Rocket size={18} className="text-[hsl(var(--google-blue))]" />
+                    <Beaker size={18} className="text-[hsl(var(--google-blue))]" />
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground">Projects Delivered</p>
-                    <p className="text-xl font-bold text-foreground">10+</p>
+                    <p className="text-xs text-muted-foreground">Drug Discovery Tools</p>
+                    <p className="text-xl font-bold text-foreground">3+</p>
                   </div>
                 </div>
 
                 <div className="google-card p-4 mb-4 flex items-center gap-4 animate-float shadow-xl" style={{ animationDelay: '1.5s', animationDuration: '6s', transform: 'translateY(-10px)' }}>
                   <div className="w-10 h-10 rounded-full bg-[hsl(var(--google-green))]/10 flex items-center justify-center">
-                    <Bot size={18} className="text-[hsl(var(--google-green))]" />
+                    <FileText size={18} className="text-[hsl(var(--google-green))]" />
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground">ML Model Accuracy</p>
-                    <p className="text-xl font-bold text-foreground">99%</p>
+                    <p className="text-xs text-muted-foreground">Research Publications</p>
+                    <p className="text-xl font-bold text-foreground">4</p>
                   </div>
                 </div>
 
                 <div className="google-card p-4 flex items-center gap-4 animate-float" style={{ animationDelay: '2.5s', animationDuration: '5s' }}>
                   <div className="w-10 h-10 rounded-full bg-[hsl(var(--google-yellow))]/10 flex items-center justify-center">
-                    <Zap size={18} className="text-[hsl(var(--google-yellow))]" />
+                    <Atom size={18} className="text-[hsl(var(--google-yellow))]" />
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground">API Optimization</p>
-                    <p className="text-xl font-bold text-foreground">40%</p>
+                    <p className="text-xs text-muted-foreground">Virtual Screening</p>
+                    <p className="text-xl font-bold text-foreground">30K+</p>
                   </div>
                 </div>
 

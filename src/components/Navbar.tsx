@@ -4,8 +4,8 @@ import { Menu, X } from "lucide-react";
 const links = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
+  { label: "Projects", href: "#experience" },
+  { label: "Publications", href: "#projects" },
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
@@ -67,8 +67,8 @@ const Navbar = () => {
       >
         {/* Logo */}
         <a href="#" className="flex items-center gap-1.5">
-          <span className="text-xl font-bold text-[#202124]">Gowtham</span>
-          <span className="text-xl font-bold text-[#1a73e8]">Pugalenthi</span>
+          <span className="text-xl font-bold text-[#202124]">Sridhar</span>
+          <span className="text-xl font-bold text-[#1a73e8]">Duraisamy</span>
         </a>
 
         {/* Desktop Links (Static Layout) */}
@@ -126,7 +126,7 @@ const Navbar = () => {
 
           {/* Mobile UI for Pill Header */}
           <div className="md:hidden flex items-center px-4 py-2 gap-4">
-             <span className="text-sm font-bold text-[#1a73e8]">G. Pugalenthi</span>
+             <span className="text-sm font-bold text-[#1a73e8]">Sridhar JD</span>
              <button 
               onClick={() => setOpen(!open)} 
               className="text-[#5f6368] w-8 h-8 rounded-full bg-[#f1f3f4] flex items-center justify-center transition-colors"

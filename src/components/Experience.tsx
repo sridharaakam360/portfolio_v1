@@ -4,38 +4,34 @@ import { useState } from "react";
 
 const experiences = [
   {
-    company: "Younderbots",
-    role: "Machine Learning Specialist",
-    period: "Present",
+    company: "Hybrid Quantum–Classical Drug-Binding Affinity Pipeline",
+    role: "Quantum Machine Learning Engineer",
     color: "hsl(216, 85%, 55%)",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop", // Abstract Tech / AI
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800&auto=format&fit=crop",
     points: [
-      "Designed and deployed machine learning models for real-world business use cases.",
-      "Applied deep learning and NLP techniques to automate data processing workflows.",
+      "Built Hybrid Quantum–Classical Drug-Binding Affinity Pipeline — an end-to-end laptop-runnable pipeline from protein target to trained quantum-classical model scoring ΔG with honest benchmarks.",
     ],
   },
   {
-    company: "Aakam360",
-    role: "Software Developer",
-    period: "Jul 2025 – Mar 2026",
+    company: "Gromacs MD Simulation Automation Suite",
+    role: "Computational Biophysics Developer",
     color: "hsl(144, 72%, 36%)",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop", // Clean Code / Terminal
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
     points: [
-      "Built dynamic and static websites using Next.js and MERN stack for client projects.",
-      "Performed software testing for mobile applications, identifying and reporting bugs.",
-      "Collaborated with cross-functional teams to deliver scalable web solutions.",
+      "Built complete automation with UI/UX for Gromacs & NAMD MD simulations with live data interpretations (RMSD, RMSF, SASA, RG, HBOND) and MMPBSA free energy.",
+      "Designed user-friendly interface for non-technical researchers to run complex molecular dynamics simulations seamlessly.",
+      "Integrated real-time data visualization and analysis tools for instant feedback on simulation results.",
     ],
   },
   {
-    company: "FintechGie",
-    role: "Web Development Intern",
-    period: "Jan 2024 – Feb 2026",
+    company: "AutoDock Vina Docking & ADMET Platform",
+    role: "Cheminformatics & Full-Stack Developer",
     color: "hsl(43, 95%, 52%)",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop", // Modern dashboard / analytics
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
     points: [
-      "Built knowledge assessment platform, increasing user engagement by 30%.",
-      "Reduced API latency by 40% through optimized structure; enhanced security with JWT.",
-      "Developed Young Chanakya — an in-house CMS product with integrated payment gateway.",
+      "Built multi-target with multi-ligands complete automation docking, ADMET, and Visualization — integrated with AutoDock Vina, RDKit, and PyMOL.",
+      "Developed scalable web platform for computational drug discovery workflows.",
+      "Created intuitive visualization dashboards for docking results and ADMET predictions.",
     ],
   },
 ];
@@ -57,7 +53,7 @@ const Experience = () => {
         <RevealOnScroll>
           <div className="text-center mb-16">
             <h2 className="text-[32px] md:text-[42px] font-medium text-foreground tracking-tight">
-              Where I've contributed
+              What I've built
             </h2>
           </div>
         </RevealOnScroll>
@@ -102,7 +98,7 @@ const Experience = () => {
                     {/* Minimalist inactive representation */}
                     <div className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 text-white ${isActive ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-100 scale-100'}`}>
                       <span className="font-bold tracking-widest text-lg uppercase" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
-                        {exp.company}
+                        {exp.company.length > 20 ? exp.company.substring(0, 20) + '...' : exp.company}
                       </span>
                     </div>
                   </div>
@@ -121,13 +117,10 @@ const Experience = () => {
                         {exp.points[1] && <><br/><br/>{exp.points[1]}</>}
                       </p>
 
-                      <div className="mt-auto flex items-center justify-between">
+                      <div className="mt-auto flex items-center justify-end">
                         <button className="rounded-full px-7 py-3 font-semibold text-[14px] text-white transition-all hover:opacity-90 shadow-sm" style={{ backgroundColor: exp.color }}>
                           View details ↗
                         </button>
-                        <span className="text-xs font-bold text-muted-foreground tracking-widest uppercase">
-                          {exp.period}
-                        </span>
                       </div>
                     </div>
                   </div>

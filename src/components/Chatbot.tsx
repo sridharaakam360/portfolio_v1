@@ -15,7 +15,7 @@ const Chatbot = () => {
     {
       id: "1",
       role: "assistant",
-      content: "Hi there! I am Gowtham's AI assistant. How can I help you today?",
+      content: "Hi there! I am Sridhar's AI assistant. How can I help you today?",
     },
   ]);
   const [input, setInput] = useState("");
@@ -111,7 +111,7 @@ const Chatbot = () => {
                 <Bot size={18} />
               </div>
               <div>
-                <h3 className="font-semibold text-sm">Gowtham's AI</h3>
+                <h3 className="font-semibold text-sm">Sridhar's AI</h3>
                 {!isModelReady ? (
                   <p className="text-xs text-muted-foreground flex items-center gap-1">
                     <Loader2 size={10} className="animate-spin" /> Load engine {modelProgress}%
